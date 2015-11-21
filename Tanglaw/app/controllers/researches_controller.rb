@@ -14,6 +14,9 @@ class ResearchesController < ApplicationController
 
   # GET /researches/new
   def new
+    if (params[:id].present?)
+      @followed_id = params[:id]
+    end
     @research = Research.new
   end
 
@@ -28,6 +31,12 @@ class ResearchesController < ApplicationController
 
     respond_to do |format|
       if @research.save
+
+        if (params[:followed_id].present?)
+          followed_research = Research.find(params[:followed_id])
+          followed_research.continue(@research)
+        end
+    
         format.html { redirect_to @research, notice: 'Research was successfully created.' }
         format.json { render :show, status: :created, location: @research }
       else
