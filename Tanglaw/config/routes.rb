@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
   resources :researches
+  resources :researches do 
+    member do
+      get :following, :followers
+    end
+  end
+  resources :continuations, only: [:create, :destroy]
   get 'static/index'
   root 'static#index'
 
