@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
+  
+  get 'researches/haraya' => 'researches#haraya'
   resources :researches
-  resources :researches do 
+  resources :researches, constraints: { id: /\d+/ } do 
     member do
       get :following, :followers
     end

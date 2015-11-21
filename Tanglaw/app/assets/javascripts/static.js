@@ -27,4 +27,15 @@ $(function(){
             }
         });
     });
+
+    $("#haraya").click(function() {
+        $.ajax({
+            type: "GET",
+            dataType: "json",
+            url: "/researches/haraya",
+            success: function(data){
+                alert(data[0].title + " and " + data[1].title);
+            }
+        });
+    });
   });

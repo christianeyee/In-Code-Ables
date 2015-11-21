@@ -33,6 +33,11 @@ class Research < ActiveRecord::Base
 	def author
 	end
 
+	def self.haraya
+		ids = Research.pluck(:id).shuffle[0..1]
+		Research.where(id: ids)
+	end
+
 	def self.search(query)
 	  __elasticsearch__.search(
 	    {
