@@ -5,7 +5,6 @@
 				<h3>Free Bootstrap Themes &amp; Templates</h3>
 				<br>
 				<a href="#about" class="btn btn-dark btn-lg">Find Out More</a>
-				<%= image_tag('torch.png')%>
 		</div>
 </header>
 
@@ -17,10 +16,11 @@
 								<h2>Featured Research</h2>
 								<% unless @research.nil? %>
 									<p class="lead"><%= @research.title %></p>
+									<p><%= @research.abstract %></p>
 								<% else %>
 									<p class="lead">No Researches Yet!</p>
 								<% end %>
-								<p><%= @research.abstract %></p>
+
 						</div>
 				</div>
 				<!-- /.row -->
@@ -31,7 +31,7 @@
 
     <!-- Services -->
     <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
-    <section id="services" class="services bg-primary">
+    <section id="categories" class="services bg-primary">
         <div class="container">
             <div class="row text-center">
                 <div class="col-lg-10 col-lg-offset-1">
@@ -41,10 +41,8 @@
                     <% @categories.each do |category| %>
                         <div class="col-md-3 col-sm-6">
                             <div class="service-item">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-cloud fa-stack-1x text-primary"></i>
-                            </span>
+															<% temp=category.name%>
+                                <%= inline_svg(temp.downcase+'.svg',{class:'svg'})%>
                                 <h4>
                                     <strong><%= category.name %></strong>
                                 </h4>

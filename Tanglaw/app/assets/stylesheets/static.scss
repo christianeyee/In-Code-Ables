@@ -298,3 +298,22 @@ footer {
   color:#2E323F;
   font-weight:bold;
 }
+
+#menu-toggle:visited{
+  color: #B9B5B5;
+}
+
+
+#categories .svg{
+  transition:all 0.5s ease;
+  height:65px;
+  width:65px;
+  fill:#003B6D;
+}
+
+
+#categories svg:hover{
+  transform: scale(1.1);
+  fill:white;
+  cursor:pointer;
+}
