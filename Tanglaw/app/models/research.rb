@@ -18,4 +18,10 @@ class Research < ActiveRecord::Base
 	def continue(continuation)
 		passive_continuations.create(followed_id: id, follower_id: continuation.id)
 	end
+
+	def self.next
+		research = Research.order("updated_at").first
+		research.touch unless research.nil?
+		research
+	end
 end
