@@ -1,0 +1,42 @@
+#header{
+  margin-top: 10vh;
+  font-color: #29d2cb;
+  font-size: 40px;
+  font-family:sans-serif;
+  text-align: center;
+}
+
+#main-container {
+    height: 100vh;
+    width: 100%;
+    color: #fff;
+    background: image_url('callout.jpg') no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+#form{
+  margin-left: 38%;
+  margin-top: 5vh;
+  width: 350px;
+  font-size: 15px;
+}
+
+.text_field{
+  font-style: sans-serif;
+  color: #000000;
+}
+
+.button{
+  margin-top: 5vh;
+  height: 5vh;
+}
+
+@media screen and (max-width: 800px) {
+  #form{
+    margin-left: 35%;
+    width: 250px;
+  }
+}
