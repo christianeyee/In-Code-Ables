@@ -70,6 +70,15 @@ class ResearchesController < ApplicationController
     end
   end
 
+  def haraya
+    @haraya = Research.haraya
+
+    respond_to do |format|
+      format.html { redirect_to researches_url }
+      format.json { render json: @haraya }
+   end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_research
