@@ -19,6 +19,15 @@
     <%= f.label :title %><br>
     <%= f.text_field :title %>
   </div>
+  <div>
+    <%= f.label "Categories" %><br>
+    <%= f.collection_check_boxes :category_ids, Category.all, :id, :name do |c| %>
+      <div class="collection-check-box">
+        <%= c.check_box %>
+        <%= c.label %>
+      </div>
+    <% end %>
+  </div>
   <div class="field">
     <%= f.label :significance %><br>
     <%= f.text_area :significance %>
