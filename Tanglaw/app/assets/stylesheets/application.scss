@@ -1,0 +1,408 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require font-awesome
+ *= require_tree .
+ *= require_self
+ */
+ @font-face {
+ font-family: 'Glyphicons Halflings';
+ src: url('../assets/glyphicons-halflings-regular.eot');
+ src: url('../assets/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),
+ url('../assets/glyphicons-halflings-regular.woff') format('woff'),
+ url('../assets/glyphicons-halflings-regular.ttf') format('truetype'),
+ url('../assets/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+ }
+
+
+ /*!
+  * Start Bootstrap - Stylish Portfolio Bootstrap Theme (http://startbootstrap.com)
+  * Code licensed under the Apache License v2.0.
+  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+  */
+
+ /* Global Styles */
+
+ html,
+ body {
+     width: 100%;
+     height: 100%;
+ }
+
+ body {
+     font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
+ }
+
+ #search{
+   width:35%;
+   max-width:500px;
+   min-width:350px;
+   position:fixed;
+   top:10px;
+   right:45px;
+   z-index:1000;
+ }
+
+ #search .input-group .form-control {
+     position: relative;
+     z-index: 2;
+     float: left;
+     width: 100%;
+     margin-bottom: 0;
+     background-color: rgba(255, 255, 255, 0.85);
+ }
+
+ #search .open>.dropdown-toggle.btn-default {
+    background-image: none;
+    background-color: rgba(255, 255, 255, 0.85);
+}
+
+#search .dropdown.dropdown-lg .dropdown-menu {
+    margin-top: -1px;
+    padding: 6px 20px;
+    background-color: rgba(255, 255, 255, 0.85);
+}
+ .dropdown.dropdown-lg .dropdown-menu {
+    margin-top: -1px;
+    padding: 6px 20px;
+}
+.input-group-btn .btn-group {
+    display: flex !important;
+}
+.btn-group .btn {
+    border-radius: 0;
+    margin-left: -1px;
+}
+.btn-group .btn:last-child {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+.btn-group .form-horizontal .btn[type="submit"] {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.form-horizontal .form-group {
+    margin-left: 0;
+    margin-right: 0;
+}
+.form-group .form-control:last-child {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+@media screen and (min-width: 768px) {
+    #adv-search {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .dropdown.dropdown-lg {
+        position: static !important;
+    }
+    .dropdown.dropdown-lg .dropdown-menu {
+        min-width: 100%;
+    }
+}
+
+ .text-vertical-center {
+     display: table-cell;
+     text-align: center;
+     vertical-align: middle;
+ }
+
+ .text-vertical-center h1 {
+     margin: 0;
+     padding: 0;
+     font-size: 4.5em;
+     font-weight: 700;
+ }
+
+ /* Custom Button Styles */
+
+ .btn-dark {
+     border-radius: 0;
+     color: #fff;
+     background-color: rgba(0,0,0,0.4);
+ }
+
+ .btn-dark:hover,
+ .btn-dark:focus,
+ .btn-dark:active {
+     color: #fff;
+     background-color: rgba(0,0,0,0.7);
+ }
+
+ .btn-light {
+     border-radius: 0;
+     color: #333;
+     background-color: rgb(255,255,255);
+ }
+
+ .btn-light:hover,
+ .btn-light:focus,
+ .btn-light:active {
+     color: #333;
+     background-color: rgba(255,255,255,0.8);
+ }
+
+ /* Custom Horizontal Rule */
+
+ hr.small {
+     max-width: 100px;
+ }
+
+ /* Side Menu */
+
+ #sidebar-wrapper {
+     z-index: 1000;
+     position: fixed;
+     right: 0;
+     width: 250px;
+     height: 100%;
+     margin-right: -250px;
+     overflow-y: auto;
+     background: #222;
+     -webkit-transition: all 0.4s ease 0s;
+     -moz-transition: all 0.4s ease 0s;
+     -ms-transition: all 0.4s ease 0s;
+     -o-transition: all 0.4s ease 0s;
+     transition: all 0.4s ease 0s;
+ }
+
+ .sidebar-nav {
+     position: absolute;
+     top: 0;
+     width: 250px;
+     margin: 0;
+     padding: 0;
+     list-style: none;
+ }
+
+ .sidebar-nav li {
+     text-indent: 20px;
+     line-height: 40px;
+ }
+
+ .sidebar-nav li a {
+     display: block;
+     text-decoration: none;
+     color: #999;
+ }
+
+ .sidebar-nav li a:hover {
+     text-decoration: none;
+     color: #fff;
+     background: rgba(255,255,255,0.2);
+ }
+
+ .sidebar-nav li a:active,
+ .sidebar-nav li a:focus {
+     text-decoration: none;
+ }
+
+ .sidebar-nav > .sidebar-brand {
+     height: 55px;
+     font-size: 18px;
+     line-height: 55px;
+ }
+
+ .sidebar-nav > .sidebar-brand a {
+     color: #999;
+ }
+
+ .sidebar-nav > .sidebar-brand a:hover {
+     color: #fff;
+     background: none;
+ }
+
+ #menu-toggle {
+     z-index: 1;
+     position: fixed;
+     top: 0;
+     right: 0;
+ }
+
+ #sidebar-wrapper.active {
+     right: 250px;
+     width: 250px;
+     -webkit-transition: all 0.4s ease 0s;
+     -moz-transition: all 0.4s ease 0s;
+     -ms-transition: all 0.4s ease 0s;
+     -o-transition: all 0.4s ease 0s;
+     transition: all 0.4s ease 0s;
+ }
+
+ .toggle {
+     margin: 5px 5px 0 0;
+ }
+
+ /* Header */
+
+ .header {
+     display: table;
+     position: relative;
+     width: 100%;
+     height: 100%;
+     background: image_url('bg.jpg') no-repeat center center scroll;
+     -webkit-background-size: cover;
+     -moz-background-size: cover;
+     background-size: cover;
+     -o-background-size: cover;
+ }
+
+ /* About */
+
+ .about {
+     padding: 50px 0;
+ }
+
+ /* Services */
+
+ .services {
+     padding: 50px 0;
+ }
+
+ .service-item {
+     margin-bottom: 30px;
+ }
+
+ /* Callout */
+
+ .callout {
+     display: table;
+     width: 100%;
+     height: 400px;
+     color: #fff;
+     background: image_url('callout.jpg') no-repeat center center scroll;
+     -webkit-background-size: cover;
+     -moz-background-size: cover;
+     background-size: cover;
+     -o-background-size: cover;
+ }
+
+ /* Portfolio */
+
+ .portfolio {
+     padding: 50px 0;
+ }
+
+ .portfolio-item {
+     margin-bottom: 30px;
+ }
+
+ .img-portfolio {
+     margin: 0 auto;
+ }
+
+ .img-portfolio:hover {
+     opacity: 0.8;
+ }
+
+ /* Call to Action */
+
+ .call-to-action {
+     padding: 50px 0;
+ }
+
+ .call-to-action .btn {
+     margin: 10px;
+ }
+
+ /* Map */
+
+ .map {
+     height: 500px;
+ }
+
+ @media(max-width:768px) {
+     .map {
+         height: 75%;
+     }
+ }
+
+ /* Footer */
+
+ footer {
+     padding: 100px 0;
+ }
+
+ #sidebar-wrapper{
+   background-color:#f9f9f9;
+   background-image:image_url('torch-transluscent.png');
+   background-size: 150% auto;
+   background-repeat: no-repeat;
+   background-position: center;
+ }
+
+
+ .sidebar-nav > .sidebar-brand {
+     height: 55px;
+     font-size: 18px;
+     line-height: 55px;
+     background: #fff;
+   }
+
+
+   .sidebar-nav > .sidebar-brand a {
+     color:#2D9BD4;
+     font-weight:900;
+     transition: all 0.5s ease;
+   }
+
+   .sidebar-nav > .sidebar-brand a:hover{
+     font-size:1.1em;
+     color:#2D9BD4;
+   }
+
+ .sidebar-nav li a{
+   transition: all 0.5s ease;
+ }
+ .sidebar-nav li a:hover{
+   color:#2E323F;
+   font-weight:bold;
+ }
+
+ #menu-toggle:visited{
+   color: #B9B5B5;
+ }
+
+
+ #categories .category{
+   margin-bottom:15px;
+ }
+
+ #categories .svg{
+   transition:all 0.5s ease;
+   height:65px;
+   width:65px;
+   fill:#003B6D;
+ }
+
+
+ #categories svg:hover{
+   transform: scale(1.1);
+   fill:white;
+   cursor:pointer;
+ }
+
+ #categories .more, #categories .more:visited{
+   color: white;
+   border: 1px solid white;
+   padding: 3px;
+   transition: all 0.25s ease;
+ }
+
+ #categories .more:hover{
+   background-color:white;
+   color:#003B6D;
+   font-weight:bold;
+   text-decoration:none;
+ }
