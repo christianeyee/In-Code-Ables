@@ -33,12 +33,12 @@
     <section id="categories" class="services bg-primary">
         <div class="container">
             <div class="row text-center">
-                <div class="col-lg-10 col-lg-offset-1">
+                <div class=" col-lg-10 col-lg-offset-1">
                     <h2>Categories</h2>
                     <hr class="small">
                     <row>
                     <% @categories.each do |category| %>
-                        <div class="col-md-3 col-sm-6">
+                        <div class="category col-md-3 col-sm-6 col-xs-6">
                             <div class="service-item">
 															<% temp=category.name%>
                                 <%= inline_svg(temp.downcase+'.svg',{class:'svg'})%>
@@ -46,7 +46,7 @@
                                     <strong><%= category.name %></strong>
                                 </h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                <%= link_to 'See Researches', category %>
+                                <%= link_to 'MORE', category, :class=>"more" %>
                             </div>
                         </div>
 	                    <!-- /.row (nested) -->
