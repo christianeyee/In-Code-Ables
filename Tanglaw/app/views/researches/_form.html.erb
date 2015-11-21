@@ -1,16 +1,16 @@
-<%= form_for(@research) do |f| %>
-  <% if @research.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@research.errors.count, "error") %> prohibited this research from being saved:</h2>
+<% if @research.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@research.errors.count, "error") %> prohibited this research from being saved:</h2>
 
-      <ul>
-      <% @research.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+    <ul>
+    <% @research.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
 
+<%= form_for @research, html: { multipart: true } do |f| %>
   <div class="field">
     <%= f.label :author %><br>
     <%= f.text_field :author %>
@@ -30,6 +30,10 @@
   <div class="field">
     <%= f.label :abstract %><br>
     <%= f.text_area :abstract %>
+  </div>
+  <div class="field">
+    <%= f.label :attachment %><br>
+    <%= f.file_field :attachment %>
   </div>
   <div class="actions">
     <%= f.submit %>
