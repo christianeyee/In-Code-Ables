@@ -24,6 +24,13 @@ ActiveRecord::Schema.define(version: 20151121161714) do
     t.integer "category_id", null: false
   end
 
+  create_table "continuations", force: :cascade do |t|
+    t.integer  "follower_id"
+    t.integer  "followed_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
   create_table "researches", force: :cascade do |t|
     t.string   "author"
     t.string   "title"

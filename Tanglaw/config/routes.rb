@@ -1,7 +1,14 @@
 Rails.application.routes.draw do
   resources :users
   resources :researches
-  get 'static/index'
+  resources :researches do 
+    member do
+      get :following, :followers
+    end
+  end
+  resources :continuations, only: [:create, :destroy]
+  resources :categories
+
   root 'static#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
