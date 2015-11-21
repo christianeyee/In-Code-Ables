@@ -30,7 +30,7 @@ class ResearchesController < ApplicationController
     @research = Research.new(research_params)
 
     respond_to do |format|
-      if @research.save
+      if @  research.save
 
         if (params[:followed_id].present?)
           followed_research = Research.find(params[:followed_id])
@@ -68,6 +68,15 @@ class ResearchesController < ApplicationController
       format.html { redirect_to researches_url, notice: 'Research was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def haraya
+    @haraya = Research.haraya
+
+    respond_to do |format|
+      format.html { redirect_to researches_url }
+      format.json { render json: @haraya }
+   end
   end
 
   private
