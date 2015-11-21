@@ -1,10 +1,9 @@
 Rails.application.routes.draw do
+  resources :researches
   get 'static/index'
   get "/ANN.pdf" => redirect("/ANN.pdf")
-  root 'static#index'
   get "static/ANN_pdf"
-
-
+  root 'static#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
