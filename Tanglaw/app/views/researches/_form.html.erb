@@ -1,16 +1,16 @@
-<%= form_for(@research) do |f| %>
-  <% if @research.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@research.errors.count, "error") %> prohibited this research from being saved:</h2>
+<% if @research.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@research.errors.count, "error") %> prohibited this research from being saved:</h2>
 
-      <ul>
-      <% @research.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+    <ul>
+    <% @research.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
 
+<%= form_for @research, html: { multipart: true } do |f| %>
   <div class="field">
     <%= f.label :author %><br>
     <%= f.text_field :author %>
@@ -18,6 +18,15 @@
   <div class="field">
     <%= f.label :title %><br>
     <%= f.text_field :title %>
+  </div>
+  <div>
+    <%= f.label "Categories" %><br>
+    <%= f.collection_check_boxes :category_ids, Category.all, :id, :name do |c| %>
+      <div class="collection-check-box">
+        <%= c.check_box %>
+        <%= c.label %>
+      </div>
+    <% end %>
   </div>
   <div class="field">
     <%= f.label :significance %><br>
@@ -30,6 +39,10 @@
   <div class="field">
     <%= f.label :abstract %><br>
     <%= f.text_area :abstract %>
+  </div>
+  <div class="field">
+    <%= f.label :attachment %><br>
+    <%= f.file_field :attachment %>
   </div>
   <div class="actions">
     <%= f.submit %>

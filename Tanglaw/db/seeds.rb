@@ -5,3 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+categories = Category.create([{name: 'Agriculture'}, {name: 'Economy'}, {name: 'Environment'},
+							  {name: 'Population'}, {name: 'Transportation'}, {name: 'Communication'},
+							  {name: 'Finance'}, {name: 'Health'}, {name: 'Employment'}, 
+							  {name: 'Social Welfare'}, {name: 'Geospatial'}])
