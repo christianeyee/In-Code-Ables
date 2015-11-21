@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :users
   resources :researches
   get 'static/index'
   root 'static#index'
