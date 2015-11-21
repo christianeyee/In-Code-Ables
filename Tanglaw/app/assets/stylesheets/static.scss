@@ -262,3 +262,39 @@ hr.small {
 footer {
     padding: 100px 0;
 }
+
+#sidebar-wrapper{
+  background-color:#f9f9f9;
+  background-image:image_url('torch-transluscent.png');
+  background-size: 150% auto;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+.sidebar-nav > .sidebar-brand {
+    height: 55px;
+    font-size: 18px;
+    line-height: 55px;
+    background: #fff;
+  }
+
+
+  .sidebar-nav > .sidebar-brand a {
+    color:#2D9BD4;
+    font-weight:900;
+    transition: all 0.5s ease;
+  }
+
+  .sidebar-nav > .sidebar-brand a:hover{
+    font-size:1.1em;
+    color:#2D9BD4;
+  }
+
+.sidebar-nav li a{
+  transition: all 0.5s ease;
+}
+.sidebar-nav li a:hover{
+  color:#2E323F;
+  font-weight:bold;
+}
