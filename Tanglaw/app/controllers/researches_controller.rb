@@ -30,7 +30,7 @@ class ResearchesController < ApplicationController
     @research = Research.new(research_params)
 
     respond_to do |format|
-      if @research.save
+      if @  research.save
 
         if (params[:followed_id].present?)
           followed_research = Research.find(params[:followed_id])

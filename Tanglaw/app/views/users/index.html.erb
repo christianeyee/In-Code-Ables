@@ -1,16 +1,18 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Users</h1>
+<div id="main-container" class="container">
 
-<table>
+<h1>Admin: Managing Users</h1>
+
+<table class="table table-striped table-responsive">
   <thead>
     <tr>
       <th>Username</th>
       <th>Password</th>
-      <th>F name</th>
-      <th>L name</th>
+      <th>First Name</th>
+      <th>Last Name</th>
       <th>Affiliation</th>
-      <th colspan="3"></th>
+      <th colspan="3">Admin Operations</th>
     </tr>
   </thead>
 
@@ -22,14 +24,16 @@
         <td><%= user.f_name %></td>
         <td><%= user.l_name %></td>
         <td><%= user.affiliation %></td>
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', user, class: 'btn btn-primary btn-xs' %></td>
+        <td><%= link_to 'Edit', edit_user_path(user), class: 'btn btn-info btn-xs'%></td>
+        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' },class: 'btn btn-danger btn-xs' %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New User', new_user_path %>
+<%= link_to new_user_path, class: 'btn btn-success' do %>
+  <i class="glyphicon glyphicon-plus"></i> Add a User
+<% end %>
+</div>
