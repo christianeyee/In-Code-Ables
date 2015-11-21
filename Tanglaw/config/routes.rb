@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :users
   resources :researches
   resources :researches do 
     member do
@@ -6,6 +7,7 @@ Rails.application.routes.draw do
     end
   end
   resources :continuations, only: [:create, :destroy]
+  resources :categories
 
   root 'static#index'
 

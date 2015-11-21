@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<% provide(:title, @user.username) %>
+<div class="row">
+  <aside class="col-md-4">
+    <section class="user_info">
+      <h1>
+        <%= @user.username %>
+      </h1>
+    </section>
+  </aside>
+</div>
+
+<p>
+  <strong>Password:</strong>
+  <%= @user.password %>
+</p>
+
+<p>
+  <strong>F name:</strong>
+  <%= @user.f_name %>
+</p>
+
+<p>
+  <strong>L name:</strong>
+  <%= @user.l_name %>
+</p>
+
+<p>
+  <strong>Affiliation:</strong>
+  <%= @user.affiliation %>
+</p>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>
