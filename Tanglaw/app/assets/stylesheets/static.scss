@@ -298,3 +298,40 @@ footer {
   color:#2E323F;
   font-weight:bold;
 }
+
+#menu-toggle:visited{
+  color: #B9B5B5;
+}
+
+
+#categories .category{
+  margin-bottom:15px;
+}
+
+#categories .svg{
+  transition:all 0.5s ease;
+  height:65px;
+  width:65px;
+  fill:#003B6D;
+}
+
+
+#categories svg:hover{
+  transform: scale(1.1);
+  fill:white;
+  cursor:pointer;
+}
+
+#categories .more, #categories .more:visited{
+  color: white;
+  border: 1px solid white;
+  padding: 3px;
+  transition: all 0.25s ease;
+}
+
+#categories .more:hover{
+  background-color:white;
+  color:#003B6D;
+  font-weight:bold;
+  text-decoration:none;
+}
