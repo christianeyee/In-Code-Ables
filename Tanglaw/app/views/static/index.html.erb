@@ -3,13 +3,17 @@
 		<div class="content">
 			<div class="text-vertical-center">
 					<div class="container">
-						<div class="jumbotron">
-							<% unless @research.nil? %>
-								<h2><%= @research.title %></h2>
-								<h3><%= @research.abstract %></h3>
-							<% else %>
-								<h3>No Researches Yet!</h3>
-							<% end %>
+						<div class="row">
+							<div class="col-md-5 col-md-offset-1">
+								<div class="jumbotron">
+									<% unless @research.nil? %>
+										<h2><%= @research.title %></h2>
+										<h3><%= @research.abstract %></h3>
+									<% else %>
+										<h3>No Researches Yet!</h3>
+									<% end %>
+								</div>
+							</div>
 						</div>
 					</div>
 					<a href="#about" class="btn btn-dark btn-lg">Find Out More</a>
