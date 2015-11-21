@@ -2,9 +2,16 @@
 <header id="top" class="header">
 		<div class="content">
 			<div class="text-vertical-center">
-					<h1>Start Bootstrap</h1>
-					<h3>Free Bootstrap Themes &amp; Templates</h3>
-					<br>
+					<div class="container">
+						<div class="jumbotron">
+							<% unless @research.nil? %>
+								<h2><%= @research.title %></h2>
+								<h3><%= @research.abstract %></h3>
+							<% else %>
+								<h3>No Researches Yet!</h3>
+							<% end %>
+						</div>
+					</div>
 					<a href="#about" class="btn btn-dark btn-lg">Find Out More</a>
 			</div>
 		</div>
@@ -15,13 +22,13 @@
 		<div class="container">
 				<div class="row">
 						<div class="col-lg-12 text-center">
-								<h2>Featured Research</h2>
-								<% unless @research.nil? %>
-									<p class="lead"><%= @research.title %></p>
-									<p><%= @research.abstract %></p>
-								<% else %>
-									<p class="lead">No Researches Yet!</p>
-								<% end %>
+							<h2>Featured Research</h2>
+							<% unless @research.nil? %>
+								<p class="lead"><%= @research.title %></p>
+								<p><%= @research.abstract %></p>
+							<% else %>
+								<p class="lead">No Researches Yet!</p>
+							<% end %>
 						</div>
 				</div>
 				<!-- /.row -->
