@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     end
   end
   resources :continuations, only: [:create, :destroy]
+  resources :categories
 
   root 'static#index'
 

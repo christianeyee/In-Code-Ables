@@ -16,10 +16,10 @@
 								<h2>Featured Research</h2>
 								<% unless @research.nil? %>
 									<p class="lead"><%= @research.title %></p>
+									<p><%= @research.abstract %></p>
 								<% else %>
 									<p class="lead">No Researches Yet!</p>
 								<% end %>
-								<p><%= @research.abstract %></p>
 						</div>
 				</div>
 				<!-- /.row -->
@@ -48,7 +48,7 @@
                                     <strong><%= category.name %></strong>
                                 </h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                <a href="#" class="btn btn-light">Learn More</a>
+                                <%= link_to 'See Researches', category %>
                             </div>
                         </div>
 	                    <!-- /.row (nested) -->
