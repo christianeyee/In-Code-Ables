@@ -16,3 +16,11 @@ User.create!(username: 'jt@gg.com', password: 'Jackie', f_name: 'Jolo', l_name: 
 User.create!(username: 'jy@gg.com', password: 'Angryy', f_name: 'Joy', l_name: 'Yee', affiliation: 'Hello Univ')
 User.create!(username: 'cv@gg.com', password: '$3K$Y', f_name: 'Toph', l_name: 'Viz', affiliation: 'UST')
 User.create!(username: 'ev@gg.com', password: '404notfound', f_name: 'Ed', l_name: 'Bald', affiliation: 'MaSci')
+
+researches = Research.create([{title: 'Research1', abstract: 'This is Research1'},
+							  {title: 'Research2', abstract: 'This is Research2'},
+							  {title: 'Research3', abstract: 'This is Research3'},
+							  {title: 'Research4', abstract: 'This is Research4'},
+							  {title: 'Research5', abstract: 'This is Research5'},
+							  {title: 'Research6', abstract: 'This is Research6'},])
+
