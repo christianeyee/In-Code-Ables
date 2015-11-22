@@ -123,16 +123,21 @@ $(function(){
     );
   });
 
-  $("").click(function() {
-  	$.ajax({
+  $("#haraya-activate").click(function() {
+  	var retrieve = $.ajax({
         type: "GET",
         dataType: "json",
         url: "/researches/haraya",
         success: function(data){
         	// data is [{research1}, {research2}]
-        	alert("Success!");
+        	//alert("Success!");
+          document.getElementById('frame1').src=data[0].attachment.url;
+          document.getElementById('frame2').src=data[1].attachment.url;
+          //alert(data[1].attachment.url);
         }
-    }); 
+    });
+
+
   });
 
 });
