@@ -1,5 +1,23 @@
 <p id="notice"><%= notice %></p>
 
-<% @researches.each do |research| %>
-	<p><%= research.title %></p> <br>
-<% end %>
+
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Title</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+      <% @researches.each do |research| %>
+      	<tr>
+  		  <td>
+	  	<%= research.title %>
+	  	  </td>
+ 		</tr>
+      <% end %>
+	
+    </tbody>
+  </table>
+</div>
