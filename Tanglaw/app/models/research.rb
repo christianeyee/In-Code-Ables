@@ -5,6 +5,10 @@ class Research < ActiveRecord::Base
   	include Elasticsearch::Model::Callbacks
 
 	mount_uploader :attachment, AttachmentUploader
+
+	belongs_to :author, class_name: "User", foreign_key: "user_id"
+	attr_accessor :author
+
 	has_and_belongs_to_many :categories
 
 	# NOT NEEDED

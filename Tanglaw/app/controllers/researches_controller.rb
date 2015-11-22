@@ -10,6 +10,7 @@ class ResearchesController < ApplicationController
   # GET /researches/1
   # GET /researches/1.json
   def show
+    #@user = User.find(@research.user_id)
   end
 
   # GET /researches/new
@@ -27,10 +28,10 @@ class ResearchesController < ApplicationController
   # POST /researches
   # POST /researches.json
   def create
-    @research = Research.new(research_params)
+    @research = current_user.researches.build(research_params)
 
     respond_to do |format|
-      if @  research.save
+      if @research.save
 
         if (params[:followed_id].present?)
           followed_research = Research.find(params[:followed_id])
@@ -87,7 +88,7 @@ class ResearchesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def research_params
-      params.require(:research).permit(:author, :title, :significance, :future, :abstract, 
+      params.require(:research).permit(:title, :significance, :future, :abstract, 
                                        :attachment, category_ids: [])
     end
 end

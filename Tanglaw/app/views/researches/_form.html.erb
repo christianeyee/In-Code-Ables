@@ -12,11 +12,6 @@
 
 <%= form_for @research, html: { multipart: true } do |f| %>
   <%= hidden_field_tag :followed_id, @followed_id %>
-
-  <div class="field">
-    <%= f.label :author %><br>
-    <%= f.text_field :author %>
-  </div>
   <div class="field">
     <%= f.label :title %><br>
     <%= f.text_field :title %>
