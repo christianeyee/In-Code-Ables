@@ -33,15 +33,18 @@
 <!-- About -->
 <section id="about" class="about">
 		<div class="container">
+				<div class="heading">
+					<h2>About</h2>
+					<hr class="small">
+				</div>
 				<div class="row">
-						<div class="col-lg-12 text-center">
-							<h2>Featured Research</h2>
-							<% unless @research.nil? %>
-								<p class="lead"><%= @research.title %></p>
-								<p><%= @research.abstract %></p>
-							<% else %>
-								<p class="lead">No Researches Yet!</p>
-							<% end %>
+						<div class="col-lg-4 text-center">
+							
+						</div>
+						<div class="col-lg-4 text-center">
+							<%= image_tag('logo.png',:class=>'logo') %>
+						</div>
+						<div class="col-lg-4 text-center">
 						</div>
 				</div>
 				<!-- /.row -->
