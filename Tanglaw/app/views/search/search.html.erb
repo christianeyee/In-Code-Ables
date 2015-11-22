@@ -1,4 +1,12 @@
-<h1>Search Results ( <%= @researches.size %> )</h1>
+<h1>Researches Search</h1>
+
+<%= form_for search_path, method: :get do |f| %>
+  <p>
+    <%= f.label "Search for" %>
+    <%= text_field_tag :q, params[:q] %>
+    <%= submit_tag "Go", name: nil %>
+  </p>
+<% end %>
 
 <ul>
   <% @researches.each do |research| %>
