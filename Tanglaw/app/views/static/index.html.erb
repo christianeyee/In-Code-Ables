@@ -5,10 +5,21 @@
 					<div class="container">
 						<div class="row">
 							<div class="col-md-5 col-md-offset-1">
+								<% unless @research.attachment_url.blank? %>
+				        <iframe src="<%="http://localhost:3000"+ @research.attachment_url%>" frameborder="0"></iframe>
+				        <% end %>
+							</div>
+							<div class="col-md-5">
 								<div class="jumbotron">
+										<h4>Featured Innovation of The Week</h4>
+										<% for x in @research.categories %>
+											<%= inline_svg(x.name.downcase + '.svg',{fill:'white',height:'30px',width:'30px'})%>
+										<% end %>
 									<% unless @research.nil? %>
 										<h2><%= @research.title %></h2>
-										<h3><%= @research.abstract %></h3>
+										<p><i>"<%= @research.abstract %>"</i></p>
+										<h3><%= @research.author %></h3>
+
 									<% else %>
 										<h3>No Researches Yet!</h3>
 									<% end %>
