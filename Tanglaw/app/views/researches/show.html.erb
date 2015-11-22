@@ -1,6 +1,9 @@
 <%stylesheet_link_tag "show_research.scss"%>
 <p id="notice"><%= notice %></p>
 
+<br><br>
+<br><br>
+
 <p>
   <strong>Title:</strong>
   <%= @research.title %>
@@ -30,13 +33,13 @@
 
 <p>
   <% unless @research.attachment_url.blank? %>
-  <iframe src="<%="http://localhost:3000"+ @research.attachment_url%>" style="width:718px; height:700px;" frameborder="0"></iframe>
+  <iframe src="<%="http://localhost:3000"+ @research.attachment_url%>" style="width:718px; height:500px;" frameborder="0"></iframe>
     <%= link_to "Download Research", @research.attachment_url %>
     <%= button_to "Delete", @research, method: :delete, class: "btn btn-danger", confirm: "Are you sure?" %>
   <% end %>
 </p>
 
-<p>
+  <p>
   <strong>Continuations:</strong>
   <% @research.followers.each do |continuation| %>
   <%= continuation.title %> <br>
