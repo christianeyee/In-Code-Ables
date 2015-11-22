@@ -1,54 +1,61 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Author:</strong>
-  <%= @research.author %>
-</p>
+      <p>
+        <strong>Author:</strong>
+        <%= @research.author %>
+      </p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @research.title %>
-</p>
+      <p>
+        <strong>Title:</strong>
+        <%= @research.title %>
+      </p>
 
-<p>
-  <strong>Significance:</strong>
-  <%= @research.significance %>
-</p>
+      <p>
+        <strong>Significance:</strong>
+        <%= @research.significance %>
+      </p>
 
-<p>
-  <strong>Future:</strong>
-  <%= @research.future %>
-</p>
+      <p>
+        <strong>Future:</strong>
+        <%= @research.future %>
+      </p>
 
-<p>
-  <strong>Abstract:</strong>
-  <%= @research.abstract %>
-</p>
+      <p>
+        <strong>Abstract:</strong>
+        <%= @research.abstract %>
+      </p>
 
-<p>
-  <% @research.categories.each do |category| %>
-  <%= category.name %> <br>
-  <% end %>
-</p>
+      <p>
+        <% @research.categories.each do |category| %>
+        <%= category.name %> <br>
+        <% end %>
+      </p>
 
-<p>
-  <% unless @research.attachment_url.blank? %>
-  <iframe src="<%="http://localhost:3000"+ @research.attachment_url%>" style="width:718px; height:700px;" frameborder="0"></iframe>
-    <%= link_to "Download Research", @research.attachment_url %>
-    <%= button_to "Delete", @research, method: :delete, class: "btn btn-danger", confirm: "Are you sure?" %>
-  <% end %>
-</p>
+      <p>
+        <% unless @research.attachment_url.blank? %>
+        <iframe src="<%="http://localhost:3000"+ @research.attachment_url%>" style="width:718px; height:700px;" frameborder="0"></iframe>
+          <%= link_to "Download Research", @research.attachment_url %>
+          <%= button_to "Delete", @research, method: :delete, class: "btn btn-danger", confirm: "Are you sure?" %>
+        <% end %>
+      </p>
 
-<p>
-  <strong>Continuations</strong>
-  <% @research.followers.each do |continuation| %>
-  <%= continuation.title %> <br>
-  <% end %>
-</p>
+      <p>
+        <strong>Continuations</strong>
+        <% @research.followers.each do |continuation| %>
+        <%= continuation.title %> <br>
+        <% end %>
+      </p>
 
-<p>
-  <%= link_to "Isulong", new_research_path(:id => @research.id) %>
-</p>
+      <p>
+        <%= link_to "Isulong", new_research_path(:id => @research.id) %>
+      </p>
 
-<%= link_to 'Edit', edit_research_path(@research) %> |
-<%= link_to 'Back', researches_path %>
+      <%= link_to 'Edit', edit_research_path(@research) %> |
+      <%= link_to 'Back', researches_path %>
+
+    </div>
+  </div>
+</div>

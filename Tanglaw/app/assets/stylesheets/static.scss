@@ -49,4 +49,24 @@
 }
 
 #top .jumbotron{
+  background:rgba(0,0,0,0.35);
+  color:white;
+}
+
+#top .jumbotron h4{
+  color: #2E6DA5;
+  font-weight:900;
+}
+#top .jumbotron p{
+  font-weight:lighter;
+}
+
+#top iframe{
+  height:60vh;
+  width:100%;
+}
+
+
+#top .container{
+  margin-bottom: 25px;
 }
