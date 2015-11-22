@@ -138,6 +138,13 @@
     transform:scale(1.2);
 }
 
+#eureka-activate{
+  font-size: 3em;
+  font-weight: 900;
+  transition: all 0.5s ease;
+  animation: spaceboots 1s ease infinite;
+}
+
 @-webkit-keyframes spaceboots {
 	0% { -webkit-transform: translate(2px, 1px) rotate(0deg); }
 	10% { -webkit-transform: translate(-1px, -2px) rotate(-1deg); }
