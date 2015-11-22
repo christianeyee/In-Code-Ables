@@ -4,10 +4,9 @@
 <br><br>
 <br><br>
 
-<p>
-  <strong>Title:</strong>
+<h1>
   <%= @research.title %>
-</p>
+</h1>
 
 <p>
   <strong>Significance:</strong>
@@ -49,9 +48,15 @@
   <% end %>
 </p>
 
-<p>
-  <%= button_to "Isulong!", new_research_path(:id => @research.id), :method => "get", class: "btn btn-primary btn-lg" %>
-</p>
+<div class = "row">
+  <div class = "col-md-4"></div>
+  <div class = "col-md-4">
+    <%= button_to "Isulong!", new_research_path(:id => @research.id), :method => "get", class: "btn btn-primary properties" %>
+  </div>
+  <div class = "col-md-4"></div>
+</div>
 
-<%= link_to 'Edit', edit_research_path(@research) %> |
-<%= link_to 'Back', researches_path %>
+<p>
+  <%= link_to 'Edit', edit_research_path(@research) %> |
+  <%= link_to 'Back', researches_path %>
+</p>
