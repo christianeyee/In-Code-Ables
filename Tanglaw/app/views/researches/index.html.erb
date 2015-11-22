@@ -5,11 +5,7 @@
 <table>
   <thead>
     <tr>
-      <th>Author</th>
       <th>Title</th>
-      <th>Significance</th>
-      <th>Future</th>
-      <th>Abstract</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,9 +14,6 @@
     <% @researches.each do |research| %>
       <tr>
         <td><%= research.title %></td>
-        <td><%= research.significance %></td>
-        <td><%= research.future %></td>
-        <td><%= research.abstract %></td>
         <td><%= link_to 'Show', research %></td>
         <td><%= link_to 'Edit', edit_research_path(research) %></td>
         <td><%= link_to 'Destroy', research, method: :delete, data: { confirm: 'Are you sure?' } %></td>
