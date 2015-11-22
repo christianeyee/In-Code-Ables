@@ -1,9 +1,10 @@
 # Tanglaw
 ---
 
-#‪#‎Screenshots‬
+#‪#‎Screenshot‬s
 
-![<Image Title>](url to screenshot)
+![Sampler](/Screen Shot 2015-11-22 at 10.36.04 AM.png
+)
 
 ## Tech and Data Used
 
@@ -19,7 +20,9 @@
 
 ## Credits
 
-# Team Name:  In-Code-Ables
+Team Name:  In-Code-Ables
+---
+
 1. Gian Carlo Sagun          _Ultimate_Front_End_Bender_
 2. John Louise Tan           _UI/UX_LORD_
 3. Christiane Joy Yee        _Ultimate_Back_End_Bender_
