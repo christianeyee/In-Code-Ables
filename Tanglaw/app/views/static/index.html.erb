@@ -2,9 +2,31 @@
 <header id="top" class="header">
 		<div class="content">
 			<div class="text-vertical-center">
-					<h1>Start Bootstrap</h1>
-					<h3>Free Bootstrap Themes &amp; Templates</h3>
-					<br>
+					<div class="container">
+						<div class="row">
+							<div class="col-md-5 col-md-offset-1">
+								<% unless @research.attachment_url.blank? %>
+				        <iframe src="<%="http://localhost:3000"+ @research.attachment_url%>" frameborder="0"></iframe>
+				        <% end %>
+							</div>
+							<div class="col-md-5">
+								<div class="jumbotron">
+										<h4>Featured Innovation of The Week</h4>
+										<% for x in @research.categories %>
+											<%= inline_svg(x.name.downcase + '.svg',{fill:'white',height:'30px',width:'30px'})%>
+										<% end %>
+									<% unless @research.nil? %>
+										<h2><%= @research.title %></h2>
+										<p><i>"<%= @research.abstract %>"</i></p>
+										<h3><%= @research.author %></h3>
+
+									<% else %>
+										<h3>No Researches Yet!</h3>
+									<% end %>
+								</div>
+							</div>
+						</div>
+					</div>
 					<a href="#about" class="btn btn-dark btn-lg">Find Out More</a>
 			</div>
 		</div>
@@ -15,13 +37,13 @@
 		<div class="container">
 				<div class="row">
 						<div class="col-lg-12 text-center">
-								<h2>Featured Research</h2>
-								<% unless @research.nil? %>
-									<p class="lead"><%= @research.title %></p>
-									<p><%= @research.abstract %></p>
-								<% else %>
-									<p class="lead">No Researches Yet!</p>
-								<% end %>
+							<h2>Featured Research</h2>
+							<% unless @research.nil? %>
+								<p class="lead"><%= @research.title %></p>
+								<p><%= @research.abstract %></p>
+							<% else %>
+								<p class="lead">No Researches Yet!</p>
+							<% end %>
 						</div>
 				</div>
 				<!-- /.row -->
@@ -79,40 +101,13 @@
 		    <section id="portfolio" class="portfolio">
 		        <div class="container">
 		            <div class="row">
-		                <div class="col-lg-10 col-lg-offset-1 text-center">
-		                    <h2>Collaborative Research, Breakthroughs for the Nation.</h2>
-		                    <hr class="small">
-		                    <div class="row">
-		                        <div class="col-md-6">
-		                            <div class="portfolio-item">
-		                                <a href="#">
-		                                </a>
-		                            </div>
-		                        </div>
-		                        <div class="col-md-6">
-		                            <div class="portfolio-item">
-		                                <a href="#">
-		                                </a>
-		                            </div>
-		                        </div>
-		                        <div class="col-md-6">
-		                            <div class="portfolio-item" idstyle="background: url('portfolio1.jpg');">
-		                                <a href="#">
-				                        </a>
-		                            </div>
-		                        </div>
-		                        <div class="col-md-6">
-		                            <div class="portfolio-item">
-		                                <a href="#">
-										<%= image_tag('portfolio-4.jpg',:class=>"img-portfolio img-responsive")%>
-		                                </a>
-		                            </div>
-		                        </div>
-		                    </div>
-		                    <!-- /.row (nested) -->
-		                    <a href="#" class="btn btn-dark">View More Items</a>
+		                <div class="col-md-4">
+		                	<div class="project" style="background-image: url(' <%=image_url('portfolio-2.png')%>');">
+												<div class="content">
+													This is hallelujah!!
+												</div>
+		                	</div>
 		                </div>
-		                <!-- /.col-lg-10 -->
 		            </div>
 		            <!-- /.row -->
 		        </div>

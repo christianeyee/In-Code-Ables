@@ -21,3 +21,52 @@
   width: 100%;
   height: 100%;
 }
+
+
+#portfolio .project{
+  display:flex;
+  height: 200px;
+  background-size:cover;
+  background-position:center;
+  background-repeat:center;
+  align-items:center;
+  justify-content:center;
+}
+
+#portfolio .content{
+  display:none;
+  height:100%;
+  width:100%;
+  transition: all 0.5s ease;
+  align-items:center;
+  justify-content:center;
+  color:white;
+}
+
+#portfolio .project:hover .content{
+  display:flex;
+  background:rgba(0,0,0,0.35);
+}
+
+#top .jumbotron{
+  background:rgba(0,0,0,0.35);
+  color:white;
+}
+
+#top .jumbotron h4{
+  color: #2E6DA5;
+  font-weight:900;
+}
+#top .jumbotron p{
+  font-weight:lighter;
+}
+
+#top iframe{
+  height:60vh;
+  width:100%;
+}
+
+
+#top .container{
+  margin-bottom: 25px;
+}

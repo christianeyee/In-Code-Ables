@@ -16,7 +16,7 @@
 //= require turbolinks
 //= require_tree .
 
-$(function(){
+$(window).load(function(){
     // Closes the sidebar menu
     $("#menu-close").click(function(e) {
         e.preventDefault();
