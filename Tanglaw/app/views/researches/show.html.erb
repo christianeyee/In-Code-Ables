@@ -36,14 +36,17 @@
 </p>
 
 <p>
-  <strong>Continuations</strong>
+  <strong>Continuations:</strong>
   <% @research.followers.each do |continuation| %>
   <%= continuation.title %> <br>
+  <% end %>
+  <% if @research.followers.empty? %>
+  <%= "Help this progress by clicking the button below!" %>
   <% end %>
 </p>
 
 <p>
-  <%= link_to "Isulong", new_research_path(:id => @research.id) %>
+  <%= button_to "Isulong!", new_research_path(:id => @research.id), :method => "get", class: "btn btn-primary btn-lg" %>
 </p>
 
 <%= link_to 'Edit', edit_research_path(@research) %> |

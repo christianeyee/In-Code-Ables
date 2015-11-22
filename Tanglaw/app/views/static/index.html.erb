@@ -1,7 +1,6 @@
 <!-- Header -->
 <header id="top" class="header">
 		<div class="content">
-			<div class="text-vertical-center">
 					<div class="container">
 						<div class="row">
 							<div class="col-md-5 col-md-offset-1">
@@ -28,22 +27,35 @@
 						</div>
 					</div>
 					<a href="#about" class="btn btn-dark btn-lg">Find Out More</a>
-			</div>
 		</div>
 </header>
 
 <!-- About -->
 <section id="about" class="about">
 		<div class="container">
+				<div class="heading">
+					<h2>About</h2>
+					<hr class="small">
+				</div>
 				<div class="row">
-						<div class="col-lg-12 text-center">
-							<h2>Featured Research</h2>
-							<% unless @research.nil? %>
-								<p class="lead"><%= @research.title %></p>
-								<p><%= @research.abstract %></p>
-							<% else %>
-								<p class="lead">No Researches Yet!</p>
-							<% end %>
+						<div id="sulong" class="col-lg-4 text-center">
+							<%= inline_svg('sulong.svg',{height:'100px',width:'100px'})%>
+							<h3>Sulong</h3>
+							<p>
+								a feature where innovators are given a chance to push the limits of their ideas and open them to everyone.
+								With this feature, their ideas can be developed further through further research and innovation with the help of their ideas.
+							</p>
+						</div>
+						<div class="col-lg-4 text-center">
+							<%= image_tag('logo.png',:class=>'logo') %>
+						</div>
+						<div id="haraya" class="col-lg-4 text-center">
+							<%= inline_svg('haraya.svg',{fill:'fill:rgba(66, 139, 202, 0.7)',height:'100px',width:'100px'})%>
+							<h3>Haraya</h3>
+							<p>
+								a feature in Tanglaw where ideas are given a chance to go beyond what they are previously for and be part of a bigger picture.
+								With Haraya, different ideas are brought together by checking their similarities and try to suggest research topics where they could be both part in.
+							</p>
 						</div>
 				</div>
 				<!-- /.row -->
@@ -111,7 +123,7 @@
 				<div class="col-md-6" style="margin-top: 20px;">
                 	<div class="project" style="background-image: url(' <%=image_url('portfolio-5.jpg')%>');">
 										<div class="content">
-											Fourteen-year-old Ahmed "Amin" Ibn Djaliv Turabin Hataman along with Gokturk Karabulut (not pictured), his classmate at the Fountain International School won the gold medal among other awards at the 2014 International Young Inventors' Project Olympiad in Tbilisi, Georgia. They explored the possibilities of turning coconut into a biodegradable form of plastic. Once the project is proven, they believe, it will open opportunities for the economy of Basilan, his hometown, where production of coconut is considered the primary industry. 
+											Fourteen-year-old Ahmed "Amin" Ibn Djaliv Turabin Hataman along with Gokturk Karabulut (not pictured), his classmate at the Fountain International School won the gold medal among other awards at the 2014 International Young Inventors' Project Olympiad in Tbilisi, Georgia. They explored the possibilities of turning coconut into a biodegradable form of plastic. Once the project is proven, they believe, it will open opportunities for the economy of Basilan, his hometown, where production of coconut is considered the primary industry.
 
 										</div>
                 	</div>
@@ -121,9 +133,9 @@
 				<div class="col-md-6" style="margin-top: 20px;">
 					<iframe width="450" height="200" src= "<%= "https://www.youtube.com/watch?v=Uc4CD1aEFwE"%>" frameborder="0"></iframe>
                 </div>
-				
 
-            
+
+
             </div>
             <!-- /.row -->
         </div>
