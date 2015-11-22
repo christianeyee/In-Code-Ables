@@ -1,11 +1,23 @@
 <!-- Header -->
 <header id="top" class="header">
-		<div class="text-vertical-center">
-				<h1>Start Bootstrap</h1>
-				<h3>Free Bootstrap Themes &amp; Templates</h3>
-				<br>
-				<div id="haraya" class= "btn btn-primary btn-lg">Haraya!</div>
-				<a href="#about" class="btn btn-dark btn-lg">Find Out More</a>
+		<div class="content">
+			<div class="text-vertical-center">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-5 col-md-offset-1">
+								<div class="jumbotron">
+									<% unless @research.nil? %>
+										<h2><%= @research.title %></h2>
+										<h3><%= @research.abstract %></h3>
+									<% else %>
+										<h3>No Researches Yet!</h3>
+									<% end %>
+								</div>
+							</div>
+						</div>
+					</div>
+					<a href="#about" class="btn btn-dark btn-lg">Find Out More</a>
+			</div>
 		</div>
 </header>
 
@@ -14,13 +26,13 @@
 		<div class="container">
 				<div class="row">
 						<div class="col-lg-12 text-center">
-								<h2>Featured Research</h2>
-								<% unless @research.nil? %>
-									<p class="lead"><%= @research.title %></p>
-									<p><%= @research.abstract %></p>
-								<% else %>
-									<p class="lead">No Researches Yet!</p>
-								<% end %>
+							<h2>Featured Research</h2>
+							<% unless @research.nil? %>
+								<p class="lead"><%= @research.title %></p>
+								<p><%= @research.abstract %></p>
+							<% else %>
+								<p class="lead">No Researches Yet!</p>
+							<% end %>
 						</div>
 				</div>
 				<!-- /.row -->
@@ -64,11 +76,13 @@
 
 
 		<!-- Callout -->
+		<!--
 		<aside class="callout">
 				<div class="text-vertical-center">
-						<h1>Vertically Centered Text</h1>
+						<h1>Kili-Kili</h1>
 				</div>
 		</aside>
+		-->
 
 
 
@@ -76,43 +90,13 @@
 		    <section id="portfolio" class="portfolio">
 		        <div class="container">
 		            <div class="row">
-		                <div class="col-lg-10 col-lg-offset-1 text-center">
-		                    <h2>Our Work</h2>
-		                    <hr class="small">
-		                    <div class="row">
-		                        <div class="col-md-6">
-		                            <div class="portfolio-item">
-		                                <a href="#">
-																				<%= image_tag('portfolio-1.jpg',:class=>"img-portfolio img-responsive")%>
-		                                </a>
-		                            </div>
-		                        </div>
-		                        <div class="col-md-6">
-		                            <div class="portfolio-item">
-		                                <a href="#">
-																				<%= image_tag('portfolio-2.jpg',:class=>'img-portfolio img-responsive')%>
-		                                </a>
-		                            </div>
-		                        </div>
-		                        <div class="col-md-6">
-		                            <div class="portfolio-item">
-		                                <a href="#">
-																				<%= image_tag('portfolio-3.jpg',:class=>'img-portfolio img-responsive')%>
-		                                </a>
-		                            </div>
-		                        </div>
-		                        <div class="col-md-6">
-		                            <div class="portfolio-item">
-		                                <a href="#">
-																				<%= image_tag('portfolio-4.jpg',:class=>"img-portfolio img-responsive")%>
-		                                </a>
-		                            </div>
-		                        </div>
-		                    </div>
-		                    <!-- /.row (nested) -->
-		                    <a href="#" class="btn btn-dark">View More Items</a>
+		                <div class="col-md-4">
+		                	<div class="project" style="background-image: url(' <%=image_url('portfolio-2.png')%>');">
+												<div class="content">
+													This is hallelujah!!
+												</div>
+		                	</div>
 		                </div>
-		                <!-- /.col-lg-10 -->
 		            </div>
 		            <!-- /.row -->
 		        </div>
@@ -124,7 +108,7 @@
 		        <div class="container">
 		            <div class="row">
 		                <div class="col-lg-12 text-center">
-		                    <h3>The buttons below are impossible to resist.</h3>
+		                    <h3>Gather. Contribute. Collaborate.</h3>
 		                    <a href="#" class="btn btn-lg btn-light">Click Me!</a>
 		                    <a href="#" class="btn btn-lg btn-dark">Look at Me!</a>
 		                </div>

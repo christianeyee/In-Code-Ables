@@ -251,13 +251,22 @@
      position: relative;
      width: 100%;
      height: 100%;
-     background: image_url('bg.jpg') no-repeat center center scroll;
+     background: image_url('header.jpg') no-repeat center center scroll;
      -webkit-background-size: cover;
      -moz-background-size: cover;
      background-size: cover;
      -o-background-size: cover;
  }
 
+.header .content{
+  display: table;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  position:absolute;
+  top:0px;
+  left:0px;
+}
  /* About */
 
  .about {
@@ -292,6 +301,7 @@
 
  .portfolio {
      padding: 50px 0;
+     background: url('portfolio.jpg') no-repeat center center fixed
  }
 
  .portfolio-item {

@@ -37,7 +37,7 @@ class ResearchesController < ApplicationController
           followed_research = Research.find(params[:followed_id])
           followed_research.continue(@research)
         end
-    
+
         format.html { redirect_to @research, notice: 'Research was successfully created.' }
         format.json { render :show, status: :created, location: @research }
       else
@@ -88,7 +88,7 @@ class ResearchesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def research_params
-      params.require(:research).permit(:title, :significance, :future, :abstract, 
+      params.require(:research).permit(:author, :title, :significance, :future, :abstract,
                                        :attachment, category_ids: [])
     end
 end
