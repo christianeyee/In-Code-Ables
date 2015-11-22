@@ -28,7 +28,7 @@ g.) Particles.js
 The languages used were Ruby, HTML, CSS, and JavaScript.
 
 ### Open Data
-Since we were a gathering app, we were the ones who provided most of the open data. But on top of that, we considered many of the attributes of the Open Data given by the government.
+Instead of utilizing open data we created our own system of open data dealing with the idea of mass intellectual transfer that is readily accessible by any Filipino, student or non-student, industry or academe, individual or institution, private sector or even our own government.
 
 ## Credits
 
