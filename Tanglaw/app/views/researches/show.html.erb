@@ -1,50 +1,72 @@
 <%stylesheet_link_tag "show_research.scss"%>
-<p id="notice"><%= notice %></p>
+<div class = "container", id = "main-container">
+  <div class = "row"><h1><%= @research.title %></h1></div>
 
-<p>
-  <strong>Title:</strong>
-  <%= @research.title %>
-</p>
+  <div class = "row">
+    <div class = "col-md-3"></div>
+    <div class = "col-md-6 properties">
+      <div class = "row property">
+        <strong>Author:</strong>
+        Joy Tan
+      </div>
 
-<p>
-  <strong>Significance:</strong>
-  <%= @research.significance %>
-</p>
+      <div class = "row property">
+        <strong>Significance:</strong>
+        It can change how the world works.
+      </div>
 
-<p>
-  <strong>Future:</strong>
-  <%= @research.future %>
-</p>
+      <div class = "row property">
+        <strong>Future:</strong>
+        Further research about the topic is needed
+      </div>
 
-<p>
-  <strong>Abstract:</strong>
-  <%= @research.abstract %>
-</p>
+      <div class = "row property">
+        <strong>Abstract:</strong>
+        <%= @research.abstract %>
+      </div>
 
-<p>
-  <% @research.categories.each do |category| %>
-  <%= category.name %> <br>
-  <% end %>
-</p>
+      <div class = "row property">
+        <% @research.categories.each do |category| %>
+        <%= category.name %> <br>
+        <% end %>
+      </div>
 
-<p>
-  <% unless @research.attachment_url.blank? %>
-  <iframe src="<%="http://localhost:3000"+ @research.attachment_url%>" style="width:718px; height:700px;" frameborder="0"></iframe>
-    <%= link_to "Download Research", @research.attachment_url %>
-    <%= button_to "Delete", @research, method: :delete, class: "btn btn-danger", confirm: "Are you sure?" %>
-  <% end %>
-</p>
+      <div class = "row property">
+        <% unless @research.attachment_url.blank? %>
+        <iframe src="<%="http://localhost:3000"+ @research.attachment_url%>" style="width:718px; height:700px;" frameborder="0"></iframe>
+          <%= link_to "Download Research", @research.attachment_url %>
+          <%= button_to "Delete", @research, method: :delete, class: "btn btn-danger", confirm: "Are you sure?" %>
+        <% end %>
+      </div>
+    </div>
+    <div class = "col-md-3"></div>
+  </div>
 
-<p>
-  <strong>Continuations</strong>
-  <% @research.followers.each do |continuation| %>
-  <%= continuation.title %> <br>
-  <% end %>
-</p>
+  <div class = "row edit-back">
+    <%= link_to 'Edit', edit_research_path(@research), class: "edit-back" %> |
+    <%= link_to 'Back', researches_path, class: "edit-back" %>
+  </div>
 
-<p>
-  <%= link_to "Isulong", new_research_path(:id => @research.id) %>
-</p>
-
-<%= link_to 'Edit', edit_research_path(@research) %> |
-<%= link_to 'Back', researches_path %>
+  <div class = "row">
+    <div class = "col-md-3"></div>
+    <div class = "col-md-6 properties">
+      <div class = "row">
+        <strong>Continuations</strong>
+        <% @research.followers.each do |continuation| %>
+        <div class = "row property">
+          <%= continuation.title %>
+        </div>
+        <% end %>
+        <% if @research.followers.empty? %>
+        <div class = "row property">
+          <%= "Help this progress by clicking the button below!" %>
+        </div>
+        <% end %>
+      </div>
+    </div>
+    <div class = "col-md-3"></div>
+  </div>
+  <div class = "row edit-back">
+    <%= link_to "Isulong", new_research_path(:id => @research.id), class: "edit-back" %>
+  </div>
+</div>
