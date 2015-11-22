@@ -123,4 +123,16 @@ $(function(){
     );
   });
 
+  $("").click(function() {
+  	$.ajax({
+        type: "GET",
+        dataType: "json",
+        url: "/researches/haraya",
+        success: function(data){
+        	// data is [{research1}, {research2}]
+        	alert("Success!");
+        }
+    }); 
+  });
+
 });

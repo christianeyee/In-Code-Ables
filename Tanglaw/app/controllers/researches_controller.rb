@@ -28,8 +28,8 @@ class ResearchesController < ApplicationController
   # POST /researches
   # POST /researches.json
   def create
-    @research = current_user.researches.build(research_params)
-
+    #@research = current_user.researches.build(research_params)
+    @research = Research.create(research_params)
     respond_to do |format|
       if @research.save
 
