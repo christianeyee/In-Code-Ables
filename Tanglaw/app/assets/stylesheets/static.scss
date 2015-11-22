@@ -98,10 +98,56 @@
 
 
 #haraya {
-  min-height:100vh;
+  height:100vh;
   width:100%;
   background-image:image_url('haraya_bg.jpg');
   background-size: 100% 100%;
   background-position:center;
   background-repeat:no-repeat;
+  display:flex;
+  align-items:center;
+  justify-content: center;
+}
+#haraya .row{
+  width:100%;
+}
+
+
+#article1,#article2,#haraya_container{
+  height:90vh;
+}
+
+#haraya_container{
+  display:flex;
+  align-items:center;
+  justify-content: center;
+}
+
+
+#haraya-activate {
+    color: #FFFFFF;
+    background-color: #6867CC;
+    border-color: #403F94;
+    font-size: 3em;
+    font-weight: 900;
+    transition: all 0.5s ease;
+    animation: spaceboots 1s ease infinite;
+  }
+
+#haraya-activate:hover{
+    transform:scale(1.2);
+}
+
+@-webkit-keyframes spaceboots {
+	0% { -webkit-transform: translate(2px, 1px) rotate(0deg); }
+	10% { -webkit-transform: translate(-1px, -2px) rotate(-1deg); }
+	20% { -webkit-transform: translate(-3px, 0px) rotate(1deg); }
+	30% { -webkit-transform: translate(0px, 2px) rotate(0deg); }
+	40% { -webkit-transform: translate(1px, -1px) rotate(1deg); }
+	50% { -webkit-transform: translate(-1px, 2px) rotate(-1deg); }
+	60% { -webkit-transform: translate(-3px, 1px) rotate(0deg); }
+	70% { -webkit-transform: translate(2px, 1px) rotate(-1deg); }
+	80% { -webkit-transform: translate(-1px, -1px) rotate(1deg); }
+	90% { -webkit-transform: translate(2px, 2px) rotate(0deg); }
+	100% { -webkit-transform: translate(1px, -2px) rotate(-1deg); }
 }
