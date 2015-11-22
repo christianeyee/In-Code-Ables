@@ -1,5 +1,29 @@
 <p id="notice"><%= notice %></p>
 
-<% @researches.each do |research| %>
-	<p><%= research.title %></p> <br>
-<% end %>
+<br><br>
+<br><br>
+
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+      <% @researches.each do |research| %>
+      	<tr>
+  		  <td>
+	  		<%= research.title %>
+	  	  </td>
+	  	  <td>
+	  	  	<%= link_to 'Explore this Innovation', research %>
+	  	  </td>
+ 		</tr>
+      <% end %>
+	
+    </tbody>
+  </table>
+</div>
