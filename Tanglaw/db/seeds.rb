@@ -8,7 +8,7 @@
 
 categories = Category.create([{name: 'Agriculture'}, {name: 'Economy'}, {name: 'Environment'},
 							  {name: 'Population'}, {name: 'Transportation'}, {name: 'Communication'},
-							  {name: 'Finance'}, {name: 'Health'}, {name: 'Employment'}, 
+							  {name: 'Finance'}, {name: 'Health'}, {name: 'Employment'},
 							  {name: 'Social Welfare'}, {name: 'Geospatial'}])
 
 gc = User.create(username: 'gg@gg.com', password: 'Saging', f_name: 'GC', l_name: 'Sags', affiliation: 'MaSci')
@@ -17,9 +17,8 @@ joy = User.create(username: 'jy@gg.com', password: 'Angryy', f_name: 'Joy', l_na
 toph = User.create(username: 'cv@gg.com', password: '$3K$Y', f_name: 'Toph', l_name: 'Viz', affiliation: 'UST')
 ed = User.create(username: 'ev@gg.com', password: '404notfound', f_name: 'Ed', l_name: 'Bald', affiliation: 'MaSci')
 
-
-gc.researches.create!({title: 'Research1', abstract: 'This is Research1'})
-jolo.researches.create!({title: 'Research2', abstract: 'This is Research2'})
-joy.researches.create!({title: 'Research3', abstract: 'This is Research3'})
-toph.researches.create!({title: 'Research4', abstract: 'This is Research4'})
-ed.researches.create!({title: 'Research5', abstract: 'This is Research5'})
+researches = Research.create([{title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', abstract: 'Fusce facilisis quis eros quis ullamcorper. In tincidunt a massa in congue. Sed in urna vitae ex aliquet faucibus ac a dui. '},
+							  {title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ', abstract: ' Suspendisse quis est sed magna finibus facilisis quis laoreet mauris. Duis non elit id enim scelerisque faucibus. Pellentesque eget augue dignissim diam. '},
+								{title: 'A Comprehensive Study on the Relationship of Making Ideas and Hackathons', abstract: 'Hackathons are supposed to show ideas instead of coding skills as it is a way to help the nation. Most hackathons focus on idea generation because coding is irrelevant in the thought process and it limits the ideas that can be made.'},
+							  {title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit', abstract: 'Proin commodo augue vel eros dictum, quis pulvinar dui varius. Curabitur sit amet ante commodo, sagittis nisl eget, gravida mi. Suspendisse potenti. '},
+							  {title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', abstract: 'Proin convallis erat orci, ac eleifend sem dapibus varius. Aliquam laoreet enim eu nibh bibendum malesuada. Donec sit amet sagittis nunc. Maecenas. '},])
