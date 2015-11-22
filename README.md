@@ -1,22 +1,34 @@
-# Tanglaw
+Tanglaw
 ---
 
-#‪#‎Screenshot‬s
+Screenshot‬s
+---
 
-![Sampler](/Screen Shot 2015-11-22 at 10.36.04 AM.png
-)
+![First](/Screen Shot 2015-11-22 at 10.36.04 AM.png)
+![Second](/Screen Shot 2015-11-22 at 10.36.28 AM.png)
+![Third](/Screen Shot 2015-11-22 at 10.38.13 AM.png)
+![Fourth](/Screen Shot 2015-11-22 at 10.49.26 AM.png)
 
 ## Tech and Data Used
 
 ### Frameworks
+The main framework used was Ruby on Rails. For the front-end side of the software, we used BootStrap and jQuery
 
 ### Tools
+We used several gems and frameworks readily available in Rails. Most notable are the following:
+a.) Pry
+b.) jQuery
+c.) ElasticSearch
+d.) CarrierWave
+e.) BootStrap-SASS
+f.) FontAwesome
+g.) Particles.js
 
-### Languages
-
+### Languages (Programming, Markup, Scripting)
+The languages used were Ruby, HTML, CSS, and JavaScript.
 
 ### Open Data
-
+Since we were a gathering app, we were the ones who provided most of the open data. But on top of that, we considered many of the attributes of the Open Data given by the government.
 
 ## Credits
 
