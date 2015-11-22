@@ -10,6 +10,7 @@ class ResearchesController < ApplicationController
   # GET /researches/1
   # GET /researches/1.json
   def show
+    #@user = User.find(@research.user_id)
   end
 
   # GET /researches/new
@@ -27,8 +28,8 @@ class ResearchesController < ApplicationController
   # POST /researches
   # POST /researches.json
   def create
-    @research = Research.new(research_params)
-
+    #@research = current_user.researches.build(research_params)
+    @research = Research.create(research_params)
     respond_to do |format|
       if @research.save
 
